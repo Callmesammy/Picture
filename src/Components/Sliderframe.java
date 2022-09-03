@@ -25,26 +25,29 @@ public class Sliderframe extends javax.swing.JLayeredPane {
         setOpaque(false);
         layout = new MigLayout("inset 0");
         panel = new JPanel();
-        TimingTarget target = new TimingTargetAdapter(){};
+        TimingTarget target = new TimingTargetAdapter(){
+        };
         animate = new Animator(0, target);
         animate.setResolution(0);
         animate.setAcceleration(0.5f);
         animate.setDeceleration(0.5f);
         panel.setLayout(layout);
-        setLayout(new MigLayout("inset, fill 0", "[fill center]", "3[fill]3"));
-        add(panel, "w 60");
+        setLayout(new MigLayout("fill,  inset 0", "[fill, center]", "3[fill]3"));
+        add(panel, "w 100%");
     }
 
     public void addslider (Component ...com){
         if (com.length >= 2) {
             for(Component coms: com){
                 coms.setVisible(false);
-                add(coms, "pos 0 0 0 0");
+                panel.add(coms, "pos 0 0 0 0");
             }
-            
+            if (panel.getComponentCount()>0) {
+            componentShow = panel.getComponent(0);
+            componentShow.setVisible(false);
+            layout.setComponentConstraints(componentShow, "pos 0 0 100% 100%");
         }
-        if (panel.getComponentCount()>0) {
-            
+        
         }
     }
     
