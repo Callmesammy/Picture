@@ -11,7 +11,7 @@ package Components;
 public class Panel3 extends javax.swing.JPanel {
 
     /**
-     * Creates new form Panel3
+     * Creates new form Panel1
      */
     public Panel3() {
         initComponents();
@@ -26,21 +26,32 @@ public class Panel3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(2, 39, 5));
+        jButton1 = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(44, 22, 0));
+
+        jButton1.setText("jButton1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 928, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(644, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(164, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(114, 114, 114))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

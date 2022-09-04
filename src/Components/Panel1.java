@@ -28,7 +28,7 @@ public class Panel1 extends javax.swing.JPanel {
 
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(215, 0, 0));
+        setBackground(new java.awt.Color(78, 0, 0));
 
         jButton1.setText("jButton1");
 
@@ -37,16 +37,16 @@ public class Panel1 extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(408, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(644, Short.MAX_VALUE)
+                .addComponent(jButton1)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(128, 128, 128)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(164, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGap(114, 114, 114))
         );
     }// </editor-fold>//GEN-END:initComponents
 
