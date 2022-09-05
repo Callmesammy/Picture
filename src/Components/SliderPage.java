@@ -35,12 +35,15 @@ public class SliderPage extends JLayeredPane{
        });
         layout = new MigLayout("inset 0");
         panel = new JPanel();
+        
        // insttiazing the timing target and timing adapter 
         TimingTarget target = new TimingTargetAdapter(){
             @Override
             public void begin() {
              componentShow.setVisible(true);
              componentOut.setVisible(true);
+             pagnition.setIndex(selectedIndex);
+             
             }
 
             @Override
@@ -59,7 +62,9 @@ public class SliderPage extends JLayeredPane{
                      layout.setComponentConstraints(componentOut, "pos " +location+ " 0 100% 100%, w 100%!");
                   
                 }
+                pagnition.setAnimation(fraction);
                 panel.revalidate();
+              
             }
 
             @Override
