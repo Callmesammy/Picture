@@ -8,12 +8,12 @@ package Components;
  *
  * @author user
  */
-public class Panel2 extends javax.swing.JPanel {
+public class slider3 extends javax.swing.JPanel {
 
     /**
-     * Creates new form Panel1
+     * Creates new form slider1
      */
-    public Panel2() {
+    public slider3() {
         initComponents();
     }
 
@@ -28,7 +28,7 @@ public class Panel2 extends javax.swing.JPanel {
 
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(41, 0, 57));
+        setBackground(new java.awt.Color(153, 153, 0));
 
         jButton1.setText("jButton1");
 
@@ -37,16 +37,15 @@ public class Panel2 extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(644, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(0, 671, Short.MAX_VALUE)
+                .addComponent(jButton1))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(164, Short.MAX_VALUE)
+                .addContainerGap(236, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(114, 114, 114))
+                .addGap(20, 20, 20))
         );
     }// </editor-fold>//GEN-END:initComponents
 
