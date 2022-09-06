@@ -14,8 +14,9 @@ import org.jdesktop.animation.timing.TimingTargetAdapter;
 public class SliderPage extends JLayeredPane{
 //creation of all th necessary componets needed 
     
-    private final Pagnition pagnition;
     private final JPanel panel;
+   
+    private final Pagnition pagnition;
     private final Animator animate; 
     private final MigLayout layout;
     private Component componentShow;
@@ -26,25 +27,23 @@ public class SliderPage extends JLayeredPane{
     // in this segment you fill all the categories, 
     public SliderPage() {
        // bring down the final components
-       pagnition = new Pagnition();
-       pagnition.addPagnision(new Pagnission() {
-           @Override
-           public void Onclick(int index) {
-               System.out.println(".Onclick()" +index);
-           }
-       });
+     
+       
         layout = new MigLayout("inset 0");
         panel = new JPanel();
-        
+          pagnition = new Pagnition();
+         pagnition.addPagnision(new Pagnision() {
+            @Override
+            public void Onclick(int index) {
+                
        // insttiazing the timing target and timing adapter 
         TimingTarget target = new TimingTargetAdapter(){
             @Override
             public void begin() {
              componentShow.setVisible(true);
-             componentOut.setVisible(true);
+             componentOut.setVisible(true);  
              pagnition.setIndex(selectedIndex);
-             
-            }
+    }
 
             @Override
             public void timingEvent(float fraction) {
@@ -61,9 +60,10 @@ public class SliderPage extends JLayeredPane{
                       layout.setComponentConstraints(componentShow, "pos -" +locationShow+ " 0 " +(width-locationShow)+ " 100% ");
                      layout.setComponentConstraints(componentOut, "pos " +location+ " 0 100% 100%, w 100%!");
                   
-                }
-                pagnition.setAnimation(fraction);
+                } 
+              
                 panel.revalidate();
+                pagnition.addAnimation(fraction);
               
             }
 
@@ -100,10 +100,11 @@ public class SliderPage extends JLayeredPane{
                 componentShow.setVisible(true);
                 layout.setComponentConstraints(componentShow, "pos 0 0 100% 100%");
             }
+            
         }
-        pagnition.totalPage(panel.getComponentCount());
-        pagnition.addcurrentindex(0);
-  
+        
+        pagnition.totalSelected(panel.getComponentCount());
+        pagnition.setSelected(0); 
     }
     
     //instatiazing the necessary component for the sliding to be able from segment to the other 

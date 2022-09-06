@@ -28,7 +28,7 @@ public class slider3 extends javax.swing.JPanel {
 
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(153, 153, 0));
+        setBackground(new java.awt.Color(92, 5, 163));
 
         jButton1.setText("jButton1");
 
