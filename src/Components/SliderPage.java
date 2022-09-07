@@ -4,8 +4,11 @@ package Components;
 // extends JLayeredpane in other to be able to drag to the main page 
 
 import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
@@ -17,6 +20,7 @@ public class SliderPage extends JLayeredPane{
     private final JPanel panel;
    
     private final Pagnition pagnition;
+    private final Timer timer;
     private final Animator animate; 
     private final MigLayout layout;
     private Component componentShow;
@@ -35,7 +39,34 @@ public class SliderPage extends JLayeredPane{
          pagnition.addPagnision(new Pagnision() {
             @Override
             public void Onclick(int index) {
-                
+                 timer.restart();
+              if(!animate.isRunning()){
+                  if (index != selectedIndex) {
+                      selected = selectedIndex < index;
+                      if (selected) {
+                          componentOut = panel.getComponent(checknext(selectedIndex));
+                          selectedIndex = getnext(index-1);
+                          componentShow = panel.getComponent(selectedIndex);
+                          animate.start();
+                      }else{
+                                      componentOut = panel.getComponent(checkback(selectedIndex));
+                                      selectedIndex = getback(index+1);
+                                      componentShow = panel.getComponent(selectedIndex);
+                                      animate.start();
+                                  }
+                              }
+                          }
+                      
+                  
+              }
+                      
+         });
+         timer = new Timer(2000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               next();
+            }
+         });
        // insttiazing the timing target and timing adapter 
         TimingTarget target = new TimingTargetAdapter(){
             @Override
@@ -105,11 +136,13 @@ public class SliderPage extends JLayeredPane{
         
         pagnition.totalSelected(panel.getComponentCount());
         pagnition.setSelected(0); 
+        timer.restart();
     }
     
     //instatiazing the necessary component for the sliding to be able from segment to the other 
     
     public void next(){
+         timer.restart();
         if (!animate.isRunning()) {
             selected = true;
             selectedIndex = getnext(selectedIndex);
@@ -122,6 +155,7 @@ public class SliderPage extends JLayeredPane{
     }
     // adding the back sliding and its components 
     public void back(){
+         timer.restart();
         if (!animate.isRunning()) {
               if (!animate.isRunning()) {
             selected = false;
