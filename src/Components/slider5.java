@@ -8,12 +8,12 @@ package Components;
  *
  * @author user
  */
-public class slider1 extends javax.swing.JPanel {
+public class slider5 extends javax.swing.JPanel {
 
     /**
      * Creates new form slider1
      */
-    public slider1() {
+    public slider5() {
         initComponents();
     }
 
@@ -28,9 +28,10 @@ public class slider1 extends javax.swing.JPanel {
 
         pictureBox1 = new Components.PictureBox();
 
-        setBackground(new java.awt.Color(0, 0, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
 
-        pictureBox1.setImage(new javax.swing.ImageIcon(getClass().getResource("/picture/packages/01.jpg"))); // NOI18N
+        pictureBox1.setBackground(new java.awt.Color(255, 255, 255));
+        pictureBox1.setImage(new javax.swing.ImageIcon(getClass().getResource("/picture/packages/9.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

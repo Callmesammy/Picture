@@ -52,6 +52,11 @@
   </Layout>
   <SubComponents>
     <Container class="Components.SliderPage" name="sliderPage1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Container>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
