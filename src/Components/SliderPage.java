@@ -3,6 +3,7 @@ package Components;
 
 // extends JLayeredpane in other to be able to drag to the main page 
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,6 +31,7 @@ public class SliderPage extends JLayeredPane{
     
     // in this segment you fill all the categories, 
     public SliderPage() {
+        setBackground(Color.WHITE);
        // bring down the final components
      
        

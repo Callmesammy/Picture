@@ -4,6 +4,9 @@ package pixieeeee;
 import Components.slider1;
 import Components.slider2;
 import Components.slider3;
+import Components.slider4;
+import Components.slider5;
+import java.awt.Color;
 
 
 public class Main extends javax.swing.JFrame {
@@ -12,7 +15,8 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         //instatiazing the necessary components 
-        sliderPage1.inisliding(new slider1(), new slider2(),new slider3());
+        getContentPane().setBackground(new Color(255,255,255));
+        sliderPage1.inisliding(new slider1(), new slider2(),new slider3(), new slider4(), new slider5());
     }
 
    
@@ -25,6 +29,8 @@ public class Main extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        sliderPage1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setText(">");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
